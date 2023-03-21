@@ -18,8 +18,13 @@
 
 stages:          # List of stages for jobs, and their order of execution
   - build
-  - test
-  - deploy
+  - lint
+
+lint-job:
+  stage: lint
+  image: golangci/golangci-lint:latest
+  script:
+    - golangci-lint run -v
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
