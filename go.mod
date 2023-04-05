@@ -1,5 +1,0 @@
-module github.com/mouuui/k8s-examplecode
-
-go 1.19
-
-require github.com/davecgh/go-spew v1.1.1 // indirect
